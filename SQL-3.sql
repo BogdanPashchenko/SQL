@@ -32,25 +32,25 @@ select employee_name, role_name from employees e
 join roles_employee re on e.id = re.employee_id 
 join roles r on re.role_id = r.id ;
 
---Р’С‹РІРµСЃС‚Рё РёРјРµРЅР° Рё РґРѕР»Р¶РЅРѕСЃС‚СЊ С‚РѕР»СЊРєРѕ Java СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ.
+--Вывести зарплаты Java разработчиков
 select employee_name, role_name from employees e 
 join roles_employee re on e.id = re.employee_id 
 join roles r on re.role_id = r.id 
 where role_name like '%Java %';
 
---Р’С‹РІРµСЃС‚Рё РёРјРµРЅР° Рё РґРѕР»Р¶РЅРѕСЃС‚СЊ С‚РѕР»СЊРєРѕ Python СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ.
+--Вывести имена и должность только Python разработчиков.
 select employee_name, role_name from employees e 
 join roles_employee re on e.id = re.employee_id 
 join roles r on re.role_id = r.id 
 where role_name like '%Python%';
 
---Р’С‹РІРµСЃС‚Рё РёРјРµРЅР° Рё РґРѕР»Р¶РЅРѕСЃС‚СЊ РІСЃРµС… QA РёРЅР¶РµРЅРµСЂРѕРІ.
+--Вывести имена и должность всех QA инженеров.
 select employee_name, role_name from employees e 
 join roles_employee re on e.id = re.employee_id 
 join roles r on re.role_id = r.id 
 where role_name like '%QA%';
 
---Р’С‹РІРµСЃС‚Рё РёРјРµРЅР° Рё РґРѕР»Р¶РЅРѕСЃС‚СЊ СЂСѓС‡РЅС‹С… QA РёРЅР¶РµРЅРµСЂРѕРІ
+--Вывести имена и должность ручных QA инженеров
 select employee_name, role_name from employees e 
 join roles_employee re on e.id = re.employee_id 
 join roles r on re.role_id = r.id 
